@@ -1,4 +1,8 @@
-@extends('layout.main')
+@php
+$configData = Helper::appClasses();
+@endphp
+
+@extends('layouts.layoutMaster')
 
 @section('content')
     <x-breadcrumb
