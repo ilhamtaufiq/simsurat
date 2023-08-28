@@ -11,7 +11,7 @@
     },
     {
       "name": "Transaksi Surat",
-      "icon": "menu-icon tf-icons bx bx-food-menu",
+      "icon": "menu-icon tf-icons bx bx-envelope",
       "slug": "app-invoice",
       "badge": ["danger", "4"],
       "submenu": [
@@ -50,7 +50,7 @@
     },
     {
       "name": "Galeri Surat",
-      "icon": "menu-icon tf-icons bx bx-food-menu",
+      "icon": "menu-icon tf-icons bx bx-paperclip",
       "slug": "app-invoice",
       "badge": ["danger", "4"],
       "submenu": [
@@ -68,7 +68,7 @@
     },
     {
       "name": "Referensi",
-      "icon": "menu-icon tf-icons bx bx-food-menu",
+      "icon": "menu-icon tf-icons bx bx-analyse",
       "slug": "app-invoice",
       "badge": ["danger", "4"],
       "submenu": [
@@ -87,7 +87,7 @@
     {
       "url": "user",
       "name": "Kelola Pengguna",
-      "icon": "menu-icon tf-icons bx bx-food-menu",
+      "icon": "menu-icon tf-icons bx bx-user",
       "slug": "app-invoice-preview"
     }
   ]
