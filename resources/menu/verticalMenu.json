@@ -7,31 +7,88 @@
       "slug": "pages-home"
     },
     {
-      "url": "/page-2",
-      "icon": "menu-icon tf-icons bx bx-file",
-      "name": "Page 2",
-      "slug": "pages-page-2"
+      "menuHeader": "MENU UTAMA"
     },
     {
-      "url": "/pages/misc-error",
-      "name": "Error",
-      "icon": "menu-icon tf-icons bx bx-error",
-      "slug": "pages-misc-error",
-      "target": "_blank"
+      "name": "Transaksi Surat",
+      "icon": "menu-icon tf-icons bx bx-food-menu",
+      "slug": "app-invoice",
+      "badge": ["danger", "4"],
+      "submenu": [
+        {
+          "url": "transaction/incoming",
+          "name": "Surat Masuk",
+          "slug": "app-invoice-list"
+        },
+        {
+          "url": "transaction/outgoing",
+          "name": "Surat Keluar",
+          "slug": "app-invoice-preview"
+        }
+      ]
     },
     {
-      "url": "/auth/login-basic",
-      "name": "Login",
-      "icon": "menu-icon tf-icons bx bx-log-in",
-      "slug": "auth-login-basic",
-      "target": "_blank"
+      "name": "Buku Agenda",
+      "icon": "menu-icon tf-icons bx bx-food-menu",
+      "slug": "app-invoice",
+      "badge": ["danger", "4"],
+      "submenu": [
+        {
+          "url": "agenda/incoming",
+          "name": "Surat Masuk",
+          "slug": "app-invoice-list"
+        },
+        {
+          "url": "agenda/outgoing",
+          "name": "Surat Keluar",
+          "slug": "app-invoice-preview"
+        }
+      ]
     },
     {
-      "url": "/auth/register-basic",
-      "name": "Register",
-      "icon": "menu-icon tf-icons bx bx-user",
-      "slug": "auth-register-basic",
-      "target": "_blank"
+      "menuHeader": "MENU LAINNYA"
+    },
+    {
+      "name": "Galeri Surat",
+      "icon": "menu-icon tf-icons bx bx-food-menu",
+      "slug": "app-invoice",
+      "badge": ["danger", "4"],
+      "submenu": [
+        {
+          "url": "gallery/incoming",
+          "name": "Surat Masuk",
+          "slug": "app-invoice-list"
+        },
+        {
+          "url": "gallery/outgoing",
+          "name": "Surat Keluar",
+          "slug": "app-invoice-preview"
+        }
+      ]
+    },
+    {
+      "name": "Referensi",
+      "icon": "menu-icon tf-icons bx bx-food-menu",
+      "slug": "app-invoice",
+      "badge": ["danger", "4"],
+      "submenu": [
+        {
+          "url": "reference/classification",
+          "name": "Klasifikasi Surat",
+          "slug": "app-invoice-list"
+        },
+        {
+          "url": "reference/status",
+          "name": "Status Surat",
+          "slug": "app-invoice-preview"
+        }
+      ]
+    },
+    {
+      "url": "user",
+      "name": "Kelola Pengguna",
+      "icon": "menu-icon tf-icons bx bx-food-menu",
+      "slug": "app-invoice-preview"
     }
   ]
 }
