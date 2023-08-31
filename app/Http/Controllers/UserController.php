@@ -2,14 +2,26 @@
 
 namespace App\Http\Controllers;
 
+use App\Enums\Config as ConfigEnum;
+use App\Http\Requests\StoreUserRequest;
+use App\Http\Requests\UpdateUserRequest;
+use App\Models\Config;
+use App\Models\User;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use TheSeer\Tokenizer\Exception;
 
-class UserCntroller extends Controller
+class UserController extends Controller
 {
   /**
    * Display a listing of the resource.
+   *
+   * @param Request $request
+   * @return View
    */
-  public function index(Request $request)
+  public function index(Request $request): View
   {
     return view('pages.user', [
       'data' => User::render($request->search),
@@ -19,8 +31,11 @@ class UserCntroller extends Controller
 
   /**
    * Store a newly created resource in storage.
+   *
+   * @param StoreUserRequest $request
+   * @return RedirectResponse
    */
-  public function store(StoreUserRequest $request)
+  public function store(StoreUserRequest $request): RedirectResponse
   {
     try {
       $newUser = $request->validated();
@@ -32,7 +47,14 @@ class UserCntroller extends Controller
     }
   }
 
-  public function update(UpdateUserRequest $request, User $user)
+  /**
+   * Update the specified resource in storage.
+   *
+   * @param UpdateUserRequest $request
+   * @param User $user
+   * @return RedirectResponse
+   */
+  public function update(UpdateUserRequest $request, User $user): RedirectResponse
   {
     try {
       $newUser = $request->validated();
@@ -49,8 +71,12 @@ class UserCntroller extends Controller
 
   /**
    * Remove the specified resource from storage.
+   *
+   * @param User $user
+   * @return RedirectResponse
+   * @throws \Exception
    */
-  public function destroy(User $user)
+  public function destroy(User $user): RedirectResponse
   {
     try {
       $user->delete();
